@@ -57,7 +57,7 @@ The best performing model was RandomForestClassifier. The model fits THE data we
 ![graph1](./images/confusionmatrix.png)
 
 
-![graph1](./images/df_styled.jpg)
+![graph1](./images/df_styled.png)
 
 
 I am confident that the model would generalize beyond the current data due to the high scores on the test data. This indicates that the model is able to learn and predict properly. The model also performed well due to the data we put into it. Good input data generates good outputs. 
