@@ -86,10 +86,8 @@ For any additional questions, please contact **Moses Kuria & moses.kuria@student
 ├── data                           
 ├── images                     
 ├── README.md  
-├── TanzaniaWaterWells.ipynb              
-├── TanzaniaWaterWells_Presentation.pdf	
-
-
+├── Tanzania Water Wells Presentation.pdf	            
+├── TanzaniaWaterWells.ipynb 
 
 
 
