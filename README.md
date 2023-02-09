@@ -69,11 +69,10 @@ For any additional questions, please contact **Moses Kuria & moses.kuria@student
 
 ## Repository structure
 ├── data                           
-├── images         
-├── zippedData    
-├── Microsoft-Movie-Analysis.ipnb              
-├── Microsoft-Movie-Analysis_Presentation.pdf	         
-├── README.md                                
+├── images                     
+├── README.md  
+├── TanzaniaWaterWells.ipnb              
+├── Microsoft-Movie-Analysis_Presentation.pdf	
 
 
 
