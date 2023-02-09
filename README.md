@@ -5,7 +5,7 @@
 
 ## Overview
 
-WaterAid is an international NGO focused exclusively on ensuring equitable access to safe water, sanitation and hygiene education (WASH) for the world’s poorest communities. Tanzania, as a developing country, struggles with providing clean water to its population of over 57,000,000. There are many water points already established in the country, but some are in need of repair while others have failed altogether. To help them achieve their goal of improving access to water supplies, I have been tasked with exploring data from 59,400 wells that were previously recorded to locate wells needing repair and find patterns in non-functional wells to influence how new wells are built. 
+WaterAid is an international NGO focused exclusively on ensuring equitable access to safe water, sanitation and hygiene education (WASH) for the world’s poorest communities. Tanzania, as a developing country, struggles with providing clean water to its population of over 57,000,000. There are many water points already established in the country, but some are in need of repair while others have failed altogether. To help them achieve their goal of improving access to water supplies, I have been tasked with exploring data from 59,400 wells that were previously recorded to locate wells needing repair and find patterns in non-functional wells to influence how new wells are built and how the existing wells are repaired. 
 
 ## Business Problem
 
@@ -15,17 +15,25 @@ To achieve this, I will look at a dataset with information on 59,400 wells to be
 
 ## Data Understanding
 
-The dataset used was obtained from https://www.drivendata.org/competitions. It contains 59400 rows and 40 features some of which are similar in nature. After importing the necessary packages, I loaded the dataset into pandas dataframes. The target variable and the training values were in different CSV files. I then proceeded to merge the two pandas dataframes to be able to work on a single dataframe. Since my aim was to turn this into a binary classification problem, I chose to divide the problem into wells that need repair, and those that do not. There were some wells that were functional but still needed repair, however, since our goal is to ensure all the wells are in proper working condition, this will fit the data very well. I also explored the missing values and the duplicates.
+The dataset used was obtained from https://www.drivendata.org/competitions. It contains 59400 rows and 40 features some of which are similar in nature. After importing the necessary packages, I loaded the dataset into pandas dataframes. The target variable and the training values were in different CSV files. I then proceeded to merge the two pandas dataframes to be able to work on a single dataframe. 
+
+Since my aim was to turn this into a binary classification problem, I chose to divide the problem into wells that need repair, and those that do not. This is because a binary classification problem will allow me to use modeling to make predictions. There were some wells that were functional but still needed repair, however, since our goal is to ensure all the wells are in proper working condition, this will fit the data very well. I also explored the missing values and the duplicates. 
 
 ## Modeling
 
-The goal was to start easy and work my way to harder and more complex models. I aimed to build 4 models and their hyperparameter tuned counterparts. These are:
+I chose to build models to solve the particular problem at hand. The goal was to achieve prediction of needing repair or not needing repair data on wells to work with. Exploratory data analysis will tell me the current state of the wells. Modeling will enable me to predict their status given certain features to work with.
+
+The goal is to start easy and work my way to harder and more complex models. I aim to build 4 models and their hyperparameter tuned counterparts. These are:
 1. DecisionTreeClassifier
 2. LogisticRegressor
 3. RandomForestClassifier
 4. K-Nearest Neighbors(KNN)
 
-Starting with my baseline accuracy, I can improve from there. If each of our models predicted every well to be functional, meaning it does not need repair, it would be 54% accurate. From there, we can compare the final accuracy numbers to see how each model performs.
+The models suit this problem well because they are classifiers, and this is a classification problem. Some of them double as regressors, however, I will only focus on their classification element.
+
+Starting with our baseline accuracy,I can improve from there. If each of our models predicted every well to be functional, meaning it does not need repair, it would be 54% accurate. From there, we can compare the final accuracy numbers to see how each model performs.
+
+Accuracy will be the main metric used to evaluate these models. This is because we want the model to be able to correctly classify the wells above all else. The rest of the metrics will be used as support metrics.
 
 ## Evaluation
 
@@ -45,6 +53,13 @@ The best performing model was RandomForestClassifier. The model fits THE data we
 2. Recall - 0.871 (87.1%)
 3. F1 score - 0.837 (83.7%)
 
+
+![graph1](./images/confusionmatrix.png)
+
+
+![graph1](./images/df_styled.jpg)
+
+
 I am confident that the model would generalize beyond the current data due to the high scores on the test data. This indicates that the model is able to learn and predict properly. The model also performed well due to the data we put into it. Good input data generates good outputs. 
 
 The model would serve WaterAid well in its pursuit to know which wells need repair and make a real impact on the people of Tanzania.
@@ -63,7 +78,7 @@ In future, the model can be improved by engineering new features that might be m
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./TanzanianWaterWells.ipynb) or our [presentation](./Microsoft%20Movie%20Analysis%20Presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](./TanzanianWaterWells.ipynb) or our [presentation](./TanzaniaWaterWells%20Presentation.pdf).
 
 For any additional questions, please contact **Moses Kuria & moses.kuria@student.moringaschool.com**
 
@@ -71,8 +86,8 @@ For any additional questions, please contact **Moses Kuria & moses.kuria@student
 ├── data                           
 ├── images                     
 ├── README.md  
-├── TanzaniaWaterWells.ipnb              
-├── Microsoft-Movie-Analysis_Presentation.pdf	
+├── TanzaniaWaterWells.ipynb              
+├── TanzaniaWaterWells_Presentation.pdf	
 
 
 
